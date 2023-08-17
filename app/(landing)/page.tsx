@@ -5,7 +5,7 @@ const LandingPage = () => {
     return ( 
         <>
             <p className="text-6xl text-orange-600">hello world from ai sass landing</p>
-            <div>
+             <div>
                 <Link href="/sign-in">
                     <Button>
                         login
