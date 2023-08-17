@@ -1,8 +1,11 @@
+"use client";
+
 import  Link  from "next/link";
 import Image from "next/image"
 import {Montserrat} from "next/font/google"
 import { cn } from "@/lib/utils";
 import { Code, ImageIcon, LayoutDashboard, MessageSquare, Music, Settings, VideoIcon } from "lucide-react";
+import SidbarItems from "./sidbarItems";
 
 const montserrat = Montserrat({
     weight: "600",
@@ -68,7 +71,8 @@ const Sidbar = () => {
                     <h1 className={cn("text-2xl font-blod", montserrat.className)}>Our Ai Sass</h1>
                 </Link>
                 <div className="space-y-1">
-                {routes.map((item)=>(
+                <SidbarItems data = {routes} />
+                {/* {routes.map((item)=>(
                     <Link 
                     href={item.href}
                     key={item.href}
@@ -80,7 +84,7 @@ const Sidbar = () => {
                                 {item.label}
                         </div>
                     </Link>
-                ))}
+                ))} */}
                 </div>
             </div>
         </div>
